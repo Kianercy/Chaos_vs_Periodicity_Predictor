@@ -7,13 +7,13 @@ Here's a breakdown of the input:
 Time Series Data (x):
 The variable x represents a one-dimensional time series data. In the example, it's generated synthetically using a sine function plus some random noise. In a real-world scenario, you would replace this synthetic data with your actual time series data.
 
-# Example time series data (replace with your data)
+ Example time series data (replace with your data)
 t = np.linspace(0, 10, 1000)
 x = np.sin(t) + 0.1 * np.random.randn(1000)
 Features (features):
 Features are calculated from the time series data and are used as input for the machine learning classifier. In the example, some basic features are extracted, such as the standard deviation, mean, and mean peak distance.
 
-# Example features for classification
+ Example features for classification
 peaks, _ = find_peaks(x)
 mean_peak_distance = np.mean(np.diff(peaks))
 
@@ -25,7 +25,7 @@ features = [
 Labels (labels):
 Labels are associated with each set of features and indicate the type of dynamical system. In the example, labels are randomly assigned (0 or 1), where 0 represents periodic behavior, and 1 represents chaotic behavior.
 
-# Example labels (0: periodic, 1: chaotic)
+ Example labels (0: periodic, 1: chaotic)
 labels = [0 if np.random.rand() < 0.5 else 1 for _ in range(100)]
 Training and Testing Sets (X_train, X_test, y_train, y_test):
 The dataset is split into training and testing sets to train and evaluate the machine learning classifier. The train_test_split function is used for this purpose.
